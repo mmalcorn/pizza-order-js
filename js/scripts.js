@@ -5,17 +5,6 @@
     this.price = 0;
   }
 
-  // var costTopping = {
-  //   "cheese": 0,
-  //   "xcheese": 1.25,
-  //   "chicken": 2.00,
-  //   "pepperoni": 2.00,
-  //   "sausage": 2.00,
-  //   "mushrooms": 1.00,
-  //   "black-olives": 1.00,
-  //   "pineapple": 1.00
-  // };
-  //
 //Creates a method to calculate the price of sm, md, or lg pizza
   Pizza.prototype.findSizePrice = function(){
     if(this.size ==='small')
@@ -33,8 +22,13 @@
   }
 
   Pizza.prototype.findToppingPrice = function(){
-    if (this.toppings){
-        this.price += 1;
+    for(i = 0; i < this.toppings.length; i++) {
+        if (this.toppings[i] == "chicken" || this.toppings[i] == "ham" || this.toppings[i] == "pepperoni" || this.toppings[i] == "sausage") {
+          this.price += 2;
+        }
+        else {
+            this.price += 1;
+        }
       }
     }
 
@@ -50,11 +44,9 @@
 
   $("input[type='checkbox']:checked").each(function(){
       userPizza.toppings.push($(this).val());
+  });
       userPizza.findToppingPrice();
-    })
-
       console.log(userPizza);
-
-  $("#pizzaPrice").append("<h2>" + "Your total will be " + "$" + userPizza.price + "</h2>")
+  $("#pizzaPrice").text("Your total will be " + "$" + userPizza.price)
   });
 });
