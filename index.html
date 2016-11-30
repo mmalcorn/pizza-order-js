@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.1.0.js"   integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="   crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+  </head>
+
+    <meta charset="utf-8">
+    <title>Brick Oven Pizza Dungeon</title>
+  <body>
+    <div class="container">
+      <h1>Make Ah Pizzah Pie</h1>
+    <div class="row">
+      <div class="col-xs-4 col-md-3">
+        <a href="#" class="thumbnail" id="thumbtoppings">
+        <img src="imgs/pepperoni.JPG" class="imgs" alt="pepperoni">
+        <img src="imgs/chicken.JPG" class="imgs" alt="chicken">
+        <img src="imgs/mushrooms.JPG" class="imgs" alt="mushrooms">
+        </a>
+      </div>
+        <div class="col-xs-4 col-md-3">
+        <a href="#" class="thumbnail" id="thumbcheese">
+        <img src="imgs/cheesepizza.JPG" class="imgs" alt="pizza">
+        <img src="imgs/greenpeppers.JPG" class="imgs" alt="greenpeppers">
+        <img src="imgs/sausage.JPG" class="imgs" alt="sausage">
+        <img src="imgs/hampinepizza.JPG" class="imgs" alt="hampinepizza">
+        </a>
+      </div>
+      <div class="col-xs-4 col-md-3">
+        <a href="#" class="thumbnail" id="thumbtoppings">
+        <img src="imgs/pineapples.JPG" class="imgs" alt="pineapples">
+        <img src="imgs/ham.JPG" class="imgs" alt="ham">
+        <img src="imgs/blackolives.JPG" class="imgs" alt="blackolives">
+        <img src="imgs/mushrooms.JPG" class="imgs" alt="mushrooms">
+        </a>
+      </div>
+    </div>
+    <form id="pizza-order">
+        <h3>Choose your size:</h3>
+        <br></br>
+      <div class="radio">
+        <label>
+          <input type="radio" name="pizza-size" value="small">
+          Small
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="pizza-size" value="medium">
+          Medium
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="pizza-size" value="large">
+          Large
+        </label>
+          <br></br>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div>
+            <p id="pizzaPrice"></p>
+          </div>
+          <h3>Select your toppings:</h3>
+          <br></br>
+          <div class="checkbox">
+          <input type="checkbox" name="topping" value="cheese">Cheese<br>
+          <input type="checkbox" name="topping" value="xcheese">Extra Cheese<br>
+          <input type="checkbox" name="topping" value="chicken">Chicken<br>
+          <input type="checkbox" name="topping" value="ham">Ham<br>
+          <input type="checkbox" name="topping" value="pepperoni">Pepperoni<br>
+          <input type="checkbox" name="topping" value="sausage">Sausage<br>
+          <input type="checkbox" name="topping" value="mushrooms">Mushrooms<br>
+          <input type="checkbox" name="topping" value="black-olives">Black Olives<br>
+          <input type="checkbox" name="topping" value="pineapple">Pineapples<br>
+        </div>
+      </div>
+    </div>
+
+        <br></br>
+
+        <div id="pizzaPrice">
+        </div>
+
+    <button type="submit" class="btn btn-warning" id="button">Place your order!</button>
+
+    </form>
+  </body>
+</html>
